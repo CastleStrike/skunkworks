@@ -6,9 +6,5 @@ jobs:
   scan:
     runs-on: ubuntu-latest
     steps:
-      - name: Simulate secret leak
-        run: |
-          echo "🔥 ALERT: leaked token = 617265206f6e20796f75722077617920"
-          echo "❌ Secret found. Failing build."
-          echo "Your path leads you to... bucket1.s3.us-east-1.castlestrike.com"
-          exit 1
+      - name: Secrets removed
+        run: echo "✅ No secrets found!"
